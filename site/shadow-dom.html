@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadow DOM Demo - static-render</title>
+  
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; }
+    a { color: #0969da; }
+  </style>
+</head>
+<body>
+  <p><a href="./">← Back</a></p>
+  <h1>Shadow DOM Demo</h1>
+  <p>These components use <code>attachShadow</code> and fetch user data from <a href="https://jsonplaceholder.typicode.com">JSONPlaceholder</a>.</p>
+  <my-widget user-id="1"><template shadowrootmode="open">
+      <style>
+        :host { display: block; font-family: sans-serif; padding: 1rem; border: 1px solid #ccc; border-radius: 8px; }
+        h2 { margin: 0 0 0.5rem; }
+        p { margin: 0.25rem 0; color: #666; }
+      </style>
+      <h2>Leanne Graham</h2>
+      <p>Sincere@april.biz</p>
+      <p>Multi-layered client-server neural-net</p>
+    </template></my-widget>
+  <br>
+  <my-widget user-id="2"><template shadowrootmode="open">
+      <style>
+        :host { display: block; font-family: sans-serif; padding: 1rem; border: 1px solid #ccc; border-radius: 8px; }
+        h2 { margin: 0 0 0.5rem; }
+        p { margin: 0.25rem 0; color: #666; }
+      </style>
+      <h2>Ervin Howell</h2>
+      <p>Shanna@melissa.tv</p>
+      <p>Proactive didactic contingency</p>
+    </template></my-widget>
+  <br>
+  <my-widget user-id="3"><template shadowrootmode="open">
+      <style>
+        :host { display: block; font-family: sans-serif; padding: 1rem; border: 1px solid #ccc; border-radius: 8px; }
+        h2 { margin: 0 0 0.5rem; }
+        p { margin: 0.25rem 0; color: #666; }
+      </style>
+      <h2>Clementine Bauch</h2>
+      <p>Nathan@yesenia.net</p>
+      <p>Face to face bifurcated interface</p>
+    </template></my-widget>
+
+
+<script data-static-render="shim">(function(){var oA=HTMLElement.prototype.attachShadow;HTMLElement.prototype.attachShadow=function(i){return this.shadowRoot||oA.call(this,i)};var P=CustomElementRegistry.prototype,oD=P.define;P.define=function(n,C){var cc=C.prototype.connectedCallback;if(cc){C.prototype.connectedCallback=function(){var el=this,ph;if(!el.shadowRoot&&el.hasAttribute("data-static-rendered")){ph=document.createElement("static-render-ph");while(el.firstChild)ph.appendChild(el.firstChild);el.appendChild(ph);el.removeAttribute("data-static-rendered")}var r=cc.apply(el,arguments);if(ph){Promise.resolve(r).then(function(){ph.remove()})}return r}}return oD.apply(this,arguments)}})()</script>
+  <script src="js/my-widget.js"></script>
+</body></html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light DOM Demo - static-render</title>
+  
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; }
+    a { color: #0969da; }
+  </style>
+</head>
+<body>
+  <p><a href="./">← Back</a></p>
+  <h1>Light DOM Demo</h1>
+  <p>This component appends directly to light DOM and fetches replies from an API.</p>
+  <page-replies open="" default="https://catskull.net/public/images/outlook_express-4.png" data-static-rendered><a href="mailto:reply@replies.catskull.net?subject=re:%20https://catskull.net/positive-selftalk.html">Reply</a><details open="">
+		  <summary>1 Replies</summary>
+		<div id="page-replies">
+		  <style>
+		    page-replies {
+		      summary {
+		        cursor: pointer;
+		        strong {
+		        	font-weight: bolder;
+		        }
+		      }
+		      ul {
+		        list-style-type: none;
+		        padding: 0;
+		        li {
+		          border-left: 1px solid;
+		          .comment {
+		            align-items: center;
+		            padding-left: 1ch;
+		            .comment-details {
+		              display: flex;
+		              align-items: flex-start;
+		              img {
+		                margin: 0;
+		                filter: saturate(0) contrast(200%);
+		                transition: filter 0.5s ease;
+		              }
+		              .comment-content {
+		                padding-left: 1ch;
+		                p {
+		                  margin: 0;
+		                  padding-bottom: 5px;
+		                }
+		                span a {
+		                  cursor: copy;
+		                }
+		              }
+		            }
+		          }
+		          .comment > .comment-details:hover > img {
+		            filter: none;
+		          }
+		        }
+		      }
+		    }
+		  </style>
+		<ul><li>
+		    <details open="" class="comment">
+		      <summary>
+		        <strong>Jared Hasson</strong>
+		      </summary>
+				
+					<div class="comment-details">
+						<img class="profile-picture" src="https://gravatar.com/avatar/32609d5d8809c4d9c9854c28837d3aaa6390e30b8781e49fc7864f65a8651f05?d=https%3A%2F%2Fcatskull.net%2Fpublic%2Fimages%2Foutlook_express-4.png" alt="Jared Hasson's Profile Picture" width="50" height="50">
+		        <div class="comment-content">
+		          <p>I like the idea of virtue being positivity - it's a nice change (not really
+different but a good reframing) over the typical virtue just being
+morality-based.
+
+Constant mental reframing shows a lot of mental fortitude and emotional
+intelligence & society would be much better off if everyone did this (or
+went to therapy to have it done for them)
+
+</p>
+		          <small>
+			          <a title="Reply with an email!" href="mailto:reply@replies.catskull.net?subject=re:%20https://catskull.net/positive-selftalk.html#fcd6c9cf-1610-4e06-b6dd-1ce2e55ee19b">Reply</a>
+			          -
+			          <span><a href="#" title="Click to like!">29 Likes</a></span>
+			          -
+			          <span>10/17/2025</span>
+		        	</small>
+		        </div>
+		      </div>
+			   </details>
+					
+			</li></ul></div></details></page-replies>
+
+
+<script data-static-render="shim">(function(){var oA=HTMLElement.prototype.attachShadow;HTMLElement.prototype.attachShadow=function(i){return this.shadowRoot||oA.call(this,i)};var P=CustomElementRegistry.prototype,oD=P.define;P.define=function(n,C){var cc=C.prototype.connectedCallback;if(cc){C.prototype.connectedCallback=function(){var el=this,ph;if(!el.shadowRoot&&el.hasAttribute("data-static-rendered")){ph=document.createElement("static-render-ph");while(el.firstChild)ph.appendChild(el.firstChild);el.appendChild(ph);el.removeAttribute("data-static-rendered")}var r=cc.apply(el,arguments);if(ph){Promise.resolve(r).then(function(){ph.remove()})}return r}}return oD.apply(this,arguments)}})()</script>
+  <script src="js/replies.js"></script>
+</body></html>

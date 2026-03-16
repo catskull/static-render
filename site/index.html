@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>static-render demos</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 640px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.6;
+    }
+    h1 { margin-bottom: 0.25rem; }
+    p.subtitle { color: #666; margin-top: 0; }
+    a { color: #0969da; }
+    ul { padding-left: 1.25rem; }
+    li { margin-bottom: 0.5rem; }
+    code { background: #f0f0f0; padding: 0.15em 0.3em; border-radius: 3px; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <h1>static-render</h1>
+  <p class="subtitle">Pre-render web components at build time. Zero changes to your components.</p>
+
+  <p>Every demo below was pre-rendered at build time using <code>static-render</code>. Disable JavaScript to see the static content, or leave it enabled to watch the components hydrate with fresh data.</p>
+
+  <h2>Demos</h2>
+  <ul>
+    <li><a href="shadow-dom.html">Shadow DOM</a> &mdash; components using <code>attachShadow</code>, fetching from an API</li>
+    <li><a href="light-dom.html">Light DOM</a> &mdash; a replies component that appends to light DOM</li>
+    <li><a href="rss.html">RSS Feed</a> &mdash; remote component script loading a Mastodon RSS feed</li>
+  </ul>
+
+  <h2>How it works</h2>
+  <ol>
+    <li>At build time, your HTML + component JS runs in a server-side DOM</li>
+    <li>Components make real API calls and render their content</li>
+    <li>Shadow DOM is serialized as <a href="https://developer.chrome.com/docs/css-ui/declarative-shadow-dom">Declarative Shadow DOM</a></li>
+    <li>A tiny hydration shim ensures a smooth swap when JS loads in the browser</li>
+  </ol>
+
+  <p><a href="https://github.com/catskull/static-render">View on GitHub</a></p>
+</body>
+</html>

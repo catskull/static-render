@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSS Feed Demo - static-render</title>
+  
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; }
+    a { color: #0969da; }
+    rss-feed img { max-width: 100%; height: auto; }
+  </style>
+</head>
+<body>
+  <p><a href="./">← Back</a></p>
+  <h1>RSS Feed Demo</h1>
+  <p>This component loads from a <a href="https://catskull.net/public/js/components/rss-feed.js">remote URL</a> and renders a Mastodon RSS feed.</p>
+  <rss-feed url="https://mastodon.social/@dareelcatskull.rss" count="5" data-static-rendered>
+				
+				<div><p>Pontificating my globulal</p></div>
+				<img src="https://files.mastodon.social/media_attachments/files/116/236/348/575/862/983/original/16166659fe237be4.png" alt="undefined">
+				<small>
+				<a href="https://mastodon.social/@dareelcatskull/116236351913434434" target="_blank">mastodon.social</a>
+				<time datetime="2026-03-16T01:52:55.000Z">March 15, 2026</time>
+				</small>
+				<hr>
+				
+				<div><p>Ghostty + "quake console" hotkey (CMD + ~) has totally changed my life.</p></div>
+				
+				<small>
+				<a href="https://mastodon.social/@dareelcatskull/116228492194936317" target="_blank">mastodon.social</a>
+				<time datetime="2026-03-14T16:34:05.000Z">March 14, 2026</time>
+				</small>
+				<hr>
+				
+				<div><p><a href="https://mastodon.social/tags/playlist" class="mention hashtag" rel="tag">#<span>playlist</span></a> week 10<br><a href="https://catskull.net/playlist" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://</span><span class="">catskull.net/playlist</span><span class="invisible"></span></a></p></div>
+				<img src="https://files.mastodon.social/media_attachments/files/116/218/920/308/852/462/original/ca0b3057456c7385.png" alt="undefined">
+				<small>
+				<a href="https://mastodon.social/@dareelcatskull/116218920966527771" target="_blank">mastodon.social</a>
+				<time datetime="2026-03-13T00:00:00.000Z">March 12, 2026</time>
+				</small>
+				<hr>
+				
+				<div><p>stop 👏 using 👏 grey 👏 text 👏<br><a href="https://catskull.net/stop-using-grey-text.html" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://</span><span class="ellipsis">catskull.net/stop-using-grey-t</span><span class="invisible">ext.html</span></a></p></div>
+				
+				<small>
+				<a href="https://mastodon.social/@dareelcatskull/116179121841328401" target="_blank">mastodon.social</a>
+				<time datetime="2026-03-05T23:18:33.000Z">March 5, 2026</time>
+				</small>
+				<hr>
+				
+				<div><p><a href="https://mastodon.social/tags/playlist" class="mention hashtag" rel="tag">#<span>playlist</span></a> week 9<br><a href="https://catskull.net/playlist" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://</span><span class="">catskull.net/playlist</span><span class="invisible"></span></a></p></div>
+				<img src="https://files.mastodon.social/media_attachments/files/116/172/613/029/299/871/original/023f8ff3bdc331ba.png" alt="undefined">
+				<small>
+				<a href="https://mastodon.social/@dareelcatskull/116172613455113220" target="_blank">mastodon.social</a>
+				<time datetime="2026-03-04T19:43:23.000Z">March 4, 2026</time>
+				</small>
+				</rss-feed>
+
+
+<script data-static-render="shim">(function(){var oA=HTMLElement.prototype.attachShadow;HTMLElement.prototype.attachShadow=function(i){return this.shadowRoot||oA.call(this,i)};var P=CustomElementRegistry.prototype,oD=P.define;P.define=function(n,C){var cc=C.prototype.connectedCallback;if(cc){C.prototype.connectedCallback=function(){var el=this,ph;if(!el.shadowRoot&&el.hasAttribute("data-static-rendered")){ph=document.createElement("static-render-ph");while(el.firstChild)ph.appendChild(el.firstChild);el.appendChild(ph);el.removeAttribute("data-static-rendered")}var r=cc.apply(el,arguments);if(ph){Promise.resolve(r).then(function(){ph.remove()})}return r}}return oD.apply(this,arguments)}})()</script>
+  <script src="https://catskull.net/public/js/components/rss-feed.js"></script>
+</body></html>
